@@ -1,0 +1,6 @@
+steps:
+  
+  - id: "Rodando docker"
+    name: 'docker/golang-project:alpine'
+    args: ['build', 'Dockerfile', -d]
+  

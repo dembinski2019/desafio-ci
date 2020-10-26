@@ -1,6 +1,6 @@
 steps:
   
   - id: "Rodando docker"
-    name: 'go:alpine'
+    name: 'gcr.io/cloud-builders/go:alpine'
     args: ['build', 'Dockerfile', -d]
   

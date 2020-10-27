@@ -2,5 +2,5 @@ steps:
   
   - id: "Rodando docker"
     name: 'docker'
-    args: ['build','-t','-f', 'Dockerfile']
+    args: ['build','-t', 'Dockerfile']
   

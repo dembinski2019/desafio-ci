@@ -1,6 +1,7 @@
 steps:
   
   - id: "Rodando docker"
+    env: ["GOPATH=app"]
     name: 'gcr.io/cloud-builders/go:alpine'
     args: ['build', 'Dockerfile', -t]
   

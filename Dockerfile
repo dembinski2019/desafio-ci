@@ -1,6 +1,11 @@
-FROM golang:1.15.2-alpine3.12
+FROM golang:1.15.2-alpine3.12 as builder
 
 COPY . /go/src/app
 WORKDIR /go/src/app
 
-ENTRYPOINT ["go","run","soma.go"]
+RUN go build soma.go
+
+FROM scratch
+COPY --from=builder /go/src/app .
+
+ENTRYPOINT ["./soma"]
